@@ -1,7 +1,8 @@
 import React from "react";
-import Main from "./Main";
+import Main from "../main/Main";
 
 const App = (props) => {
+  // eslint-disable-next-line react/prop-types
   const {offers} = props;
 
   return <div>
@@ -10,6 +11,6 @@ const App = (props) => {
       offers={offers}
     />
   </div>;
-}
+};
 
 export default App;
