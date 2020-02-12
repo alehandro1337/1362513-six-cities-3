@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import Main from "./components/main/main.jsx";
-// import App from "./components/app/app";
+import App from "./components/app/app.jsx";
 
 const names = [
   {
@@ -16,11 +14,11 @@ const names = [
 const offers = 3;
 
 const onMainTitleClick = () =>{
-  console.log(`Title was clicked`)
+  return (`Title was clicked`);
 };
 
 ReactDOM.render(
-    <Main
+    <App
       names={names}
       offers={offers}
       onMainTitleClick={onMainTitleClick}
