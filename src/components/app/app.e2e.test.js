@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import App from "./app.jsx";
 
@@ -19,7 +19,7 @@ const names = [
 it(`A title was clicked`, () =>{
   const onMainTitleClick = jest.fn();
 
-  const main = shallow(
+  const main = mount(
       <App
         names={names}
         offers={3}
