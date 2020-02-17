@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
 import offers from "./mocks/offers";
 
-const numberOfOffers = 3;
+const numberOfOffers = 4;
 
 const onMainTitleClick = () =>{
   return (`Title was clicked`);
+};
+
+const onHoverPlaceCard = () =>{
+  return(`User hover on card`);
 };
 
 ReactDOM.render(
@@ -14,6 +18,7 @@ ReactDOM.render(
       offers={offers}
       numberOfOffers={numberOfOffers}
       onMainTitleClick={onMainTitleClick}
+      onHoverPlaceCard={onHoverPlaceCard}
     />,
     document.getElementById(`root`)
 );
