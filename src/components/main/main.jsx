@@ -1,26 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PlaceCard from "../place-card/place-card.jsx";
 
-const Main = ({names, offers, onMainTitleClick}) => {
+const Main = ({offers, numberOfOffers, onMainTitleClick}) => {
   return <React.Fragment>
     <h1
       onClick={onMainTitleClick}
       className="main-title"
     >
-      Количество предложений: {offers}
+      Количество предложений: {numberOfOffers}
     </h1>
-    <ul>
-      {names.map((name, index) => (
-        <li key={index}>{name.title}</li>
+    <div className="cities__places-list places__list tabs__content">
+      {offers.map((offer, index) => (
+        <PlaceCard
+          offers={offers}
+          key={index}
+        ></PlaceCard>
       ))}
-    </ul>
+    </div>
   </React.Fragment>;
 };
 
 Main.propTypes = {
-  offers: PropTypes.number.isRequired,
+  numberOfOffers: PropTypes.number.isRequired,
   onMainTitleClick: PropTypes.func.isRequired,
-  names: PropTypes.arrayOf(
+  offers: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired
       })

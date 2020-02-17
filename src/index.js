@@ -1,17 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
+import offers from "./mocks/offers";
 
-const names = [
-  {
-    title: `Beautiful & luxurious apartment at great location`
-  },
-  {
-    title: `Wood and stone place`
-  }
-];
-
-const offers = 3;
+const numberOfOffers = 3;
 
 const onMainTitleClick = () =>{
   return (`Title was clicked`);
@@ -19,8 +11,8 @@ const onMainTitleClick = () =>{
 
 ReactDOM.render(
     <App
-      names={names}
       offers={offers}
+      numberOfOffers={numberOfOffers}
       onMainTitleClick={onMainTitleClick}
     />,
     document.getElementById(`root`)
